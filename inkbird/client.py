@@ -99,5 +99,8 @@ class InkBirdClient:
     def set_deg_f(self):
         self.characteristics[4].write(const.UNITS_F_MESSAGE, withResponse=True)
 
+    def set_deg_c(self):
+        self.characteristics[4].write(const.UNITS_C_MESSAGE, withResponse=True)
+
     def read_temperature(self):
         return self.service.peripheral.readCharacteristic(self.characteristics[3].handle)

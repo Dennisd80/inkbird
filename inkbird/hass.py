@@ -92,7 +92,7 @@ class Probe(Sensor):
         return "temperature"
     
     def units(self):
-        return "F"
+        return "°C"
 
     def value_template(self):
         return "{{ value_json.temperature }}"
@@ -117,7 +117,8 @@ class Probe(Sensor):
 
     @temperature.setter
     def temperature(self, temperature):
-        temperature = temperature/10 * 9/5 + 32 if temperature > 0 else None
+        #temperature = temperature/10 * 9/5 + 32 if temperature > 0 else None
+        temperature = temperature/10 if temperature > 0 else None
         if self._temperature == temperature:
             return
         self._temperature = temperature

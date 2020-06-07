@@ -23,7 +23,7 @@ if __name__ == "__main__":
             client.login()
             client.enable_data()
             client.enable_battery()
-            client.set_deg_f()
+            client.set_deg_c()
 
             logger.debug("Starting Loop")
             while True:
