@@ -16,6 +16,8 @@ class MqttController:
         def on_connect(client, userdata, flags, rc):
             client.publish("inkbird/status", "online", retain=True, qos=0)
 
+        username_pw_set(username=”username”,password=”password”)
+        
         client.on_connect = on_connect
 
         client.connect(host=host, port=port)
