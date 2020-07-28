@@ -25,7 +25,7 @@ You will need to modify the environmental variables
 Then just run `docker-compose up -d`
 
 I use the following code in my sensor.yaml, based on the igrill automation:
-
+```yaml
 ######### iGRILL PROBE SENSORS C ##############
 - platform: mqtt
   state_topic: "inkbird/2cab33243bcc/Probe1"
