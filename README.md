@@ -18,6 +18,7 @@ wget https://raw.githubusercontent.com/dennisd80/inkbird/master/docker-compose.y
 
 You will need to modify the environmental variables
 * `INKBIRD_MQTT_HOST` is the MQTT server that home assistant uses
+* `INKBIRD_MQTT_PORT` is the MQTT server port, if not using the default 1883
 * `INKBIRD_ADDRESS` is the bluetooth address for the inkbird
 * `INKBIRD_MQTT_USER` is the username you use for MQTT broker
 * `INKBIRD_MQTT_PASSWORD` is the password for your MQTT broker
